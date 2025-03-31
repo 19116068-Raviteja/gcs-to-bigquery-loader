@@ -80,3 +80,4 @@ jobs:
       run: |
         cd terraform  # Navigate to the terraform directory
         terraform apply -auto-approve tfplan
+
