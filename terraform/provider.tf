@@ -1,13 +1,22 @@
-provider "google" {
-    version = "~> 4.29.0"
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 4.29.0"
+    }
+    google-beta = {
+      source  = "hashicorp/google-beta"
+      version = "~> 4.29.0"
+    }
+  }
+}
 
-    Project = var.project_id
-    region = var.region
+provider "google" {
+    project = var.project_id
+    region  = var.region
 }
 
 provider "google-beta" {
-    version = "~> 4.29.0"
-
-    Project = var.project_id
-    region = var.region
+    project = var.project_id
+    region  = var.region
 }
