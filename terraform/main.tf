@@ -1,0 +1,5 @@
+# 1️⃣ Create a Cloud Storage Bucket
+resource "google_storage_bucket" "gcs_landing_bucket" {
+  name     = var.bucket_name
+  location = var.region
+}
